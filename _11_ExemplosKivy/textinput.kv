@@ -1,0 +1,21 @@
+<Quadro>
+    orientation : 'vertical' 
+    # Essa orientação faz com que cada elemento abaixo definido 
+    # seja disposto um embaixo do outro.
+    Label:
+        text : 'Informe seu nome:'
+    TextInput:
+        text : ' '
+        id   : nome1
+    Label:
+        text : 'Informe seu sobrenome: '
+    TextInput:
+        text : ' '
+        id   : sobr1
+    Button:
+        text : 'Gerar mensagem....'
+        on_release : root.uneNomes()
+    Label:
+        text : ' '
+        id   : resultado
+        font_size : 30

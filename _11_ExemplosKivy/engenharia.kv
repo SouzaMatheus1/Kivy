@@ -1,0 +1,41 @@
+<Quadro>
+    orientation : 'vertical'
+    BoxLayout:
+        Label:
+            text: 'Entre com sua Engenharia: '
+        TextInput:
+            text:'ex: Quimica, Computacao, Mecatronica, ...'
+            id  : nomeP
+            multiline : False
+    Label:
+        text : 'Ramo principal de atuacao'
+        font_size:20
+    BoxLayout:
+        Button:
+            id: btInd
+            text: 'Industria'
+            on_press: root.selAtuacao(btInd.text)
+        Button:
+            id: btCom
+            text: 'Comercio'
+            on_press: root.selAtuacao(btCom.text)        
+        Button:
+            id: btPes
+            text: 'Pesquisa'
+            on_press: root.selAtuacao(btPes.text)        
+    BoxLayout:
+        Button:
+            text: 'OK!!'
+            color: .9, .9, 0, 1            
+            font_size: 30
+            on_press: root.geraResultado()
+    Label:
+        color: 0,1,1,1
+        text: 'INSTRUCOES:\nPreencha o campo com sua engenharia e selecione o principal ramo de atuacao. Depois clique OK!!'
+        id  : resultado
+    BoxLayout:
+        Button:
+            text: 'SAIR'
+            color: .9, .9, 0, 1
+            font_size: 30
+            on_press: root.sair()

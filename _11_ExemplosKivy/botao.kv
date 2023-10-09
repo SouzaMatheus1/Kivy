@@ -1,0 +1,33 @@
+<Quadro>
+    orientation: 'vertical'
+    BoxLayout:
+        # Define cor de fundo do layout
+        canvas.before: 
+            Color:
+                rgba: 0, 1, 0, 0.5
+                #  Vermelho, Verde, Azul, Opacidade (entre 0 e 1)
+            Rectangle:
+                # self here refers to the widget i.e BoxLayout
+                pos: self.pos
+                size: self.size
+        # Cria botão       
+        Button:
+            size_hint_y: 0.333 # 1/3 da altura do BoxLayout
+            pos_hint:{'center_x': 0.5,'center_y': 0.5,}
+            text : 'Clique aqui!!!'
+            on_release : root.botao_msg()
+    BoxLayout:
+        # Define cor de fundo do layout
+        canvas.before: 
+            Color:
+                rgba: 0, 0, 1, 1
+                #  Vermelho, Verde, Azul, Opacidade (entre 0 e 1)
+            Rectangle:
+                # self here refers to the widget i.e BoxLayout
+                pos: self.pos
+                size: self.size
+        Label:
+            id : msg 
+            text : ' '
+            font_size : 30
+            markup : True

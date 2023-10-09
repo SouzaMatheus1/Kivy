@@ -1,0 +1,58 @@
+<Quadro>
+    orientation : 'vertical'
+    Label:
+        id   : mensagem
+        font_size : 15
+        text : ' '
+        markup : True  # permite o uso de formatacao no texto 
+				 # feita no arquivo .py
+    BoxLayout:
+        # um BoxLayout dentro do principal somente para exibir 
+	   # a entrada de dados
+        # os elementos pertencentes a este BoxLayout mais
+	   # interno ficarao dispostos um do lado do outro
+        Label:
+            text: 'Operando 1: '
+        TextInput:
+            text      : ' '
+            id        : op1
+            multiline : False
+        Label:
+            text: 'Operando 2:'
+        TextInput:
+            text      : ' '
+            id        : op2
+            multiline : False
+    BoxLayout:    # um BoxLayout dentro do principal somente 
+			  # para exibir o resultado.
+                  # aqui nao esta definida a orientation desse 
+		# BoxLayout, isso quer dizer que assume o valor
+                  # default (padrao) que eh 'horizontal'
+                  # para sair um Label ao lado do outro
+        Label:
+            text : 'Resultado'
+        Label:
+            text : '0'
+            id   : resultado
+            font_size : 30
+    BoxLayout:    # um BoxLayout dentro do principal somente 
+	       # para organizar os botoes, agora horizontalmente
+                  # um do lado do outro        
+        Button:
+            text : ' + '
+            on_release : root.somar()
+        Button:
+            text : ' - '
+            on_release : root.subtrair()
+        Button:
+            text : ' X '
+            on_release : root.multiplicar()
+        Button:
+            text : ' / '
+            on_release : root.dividir()
+        Button:
+            text : 'CE'
+            on_release : root.limpar()
+        Button:
+            text : 'OFF'
+            on_release : root.sair()                                                

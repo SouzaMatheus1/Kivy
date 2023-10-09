@@ -1,0 +1,32 @@
+<Tela>
+    orientation: "vertical"
+    BoxLayout:
+        orientation:"horizontal"
+        Label:
+            text:"Valor 1"
+        TextInput:
+            id:num1
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'Valor 2'
+        TextInput:
+            id:num2
+    Button:
+        text: '+'
+        on_release: root.calcular('+', num1, num2)
+    Button:
+        text: '-'
+        on_release: root.calcular('-', num1, num2)
+    Button:
+        text: 'x'
+        on_release: root.calcular('+', num1, num2)
+    Button:
+        text: '÷'
+        on_release: root.calcular('+', num1, num2)
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'Resposta'
+        TextInput:
+            id: resp

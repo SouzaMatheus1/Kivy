@@ -1,0 +1,50 @@
+<Quadro>
+    orientation : 'vertical'
+    Label:
+        # Tamanho do texto = largura do BoxLayout.        
+        text_size: root.width, None
+        # Alinha texto à direita.
+        halign: 'left'
+        text: 'Oi mundo 1!'
+        # Label à esquerda no layout.
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        # Tamanho da fonte.
+        font_size : 24
+    Label:
+        # Tamanho do texto = largura do BoxLayout.        
+        text_size: root.width, None
+        # Alinha texto no centro.
+        halign: 'center'        
+        text: 'Oi mundo 2!'
+        # Cor do texto (azul).
+        color: 0,0,1,1
+        # Centraliza no layout.
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        # Muda cor de fundo do label para vermelho.
+        canvas.before:
+            Color:
+                rgba: 1,0,0,1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        font_size : 30
+    Label:
+        # Tamanho do texto = largura do BoxLayout.        
+        text_size: root.width, None
+        # Alinha texto à direita.
+        halign: 'right'
+        text: 'Oi mundo 3!'
+        # Cor do texto (verde).
+        color: 0,1,0,1
+        # Á direita no layout.
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        # Muda cor de fundo do label para azul.
+        canvas.before:
+            Color:
+                rgba: 0,0,1,1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        font_size : 18
+               
+               
